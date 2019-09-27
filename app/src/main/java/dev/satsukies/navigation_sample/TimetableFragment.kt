@@ -28,13 +28,13 @@ class TimetableFragment : Fragment() {
         }
 
         view.findViewById<Button>(R.id.button_to_episode).setOnClickListener {
-            Intent(context, EpisodeActivity::class.java).also {
+            VideoNavigationActivity.createEpisodeIntent(requireContext(), "episodeId").also {
                 startActivity(it)
             }
         }
 
         view.findViewById<Button>(R.id.button_to_series).setOnClickListener {
-            Intent(context, SeriesActivity::class.java).also {
+            VideoNavigationActivity.createSeriesIntent(requireContext(), "seriesId").also {
                 startActivity(it)
             }
         }

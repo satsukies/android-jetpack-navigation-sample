@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_video">
+
+    <fragment
+        android:id="@+id/nav_fragment_episode"
+        android:name="dev.satsukies.navigation_sample.EpisodeFragment"
+        android:label="Episode"
+        tools:layout="@layout/fragment_episode">
+
+        <argument
+            android:name="episode_id"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/to_series"
+            app:destination="@id/nav_fragment_series"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/to_episode"
+            app:destination="@id/nav_fragment_episode"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_fragment_series"
+        android:name="dev.satsukies.navigation_sample.SeriesFragment"
+        android:label="Series"
+        tools:layout="@layout/fragment_series">
+
+        <argument
+            android:name="series_id"
+            app:argType="integer"
+            app:nullable="false" />
+
+        <action
+            android:id="@+id/to_episode"
+            app:destination="@id/nav_fragment_episode"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+        <action
+            android:id="@+id/to_series"
+            app:destination="@id/nav_fragment_series"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+
+    </fragment>
+
+</navigation>

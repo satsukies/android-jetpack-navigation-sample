@@ -20,8 +20,7 @@
     </activity>
     <activity android:name=".TimetableActivity" />
     <activity android:name=".VideoActivity" />
-    <activity android:name=".SeriesActivity" />
-    <activity android:name=".EpisodeActivity" />
+    <activity android:name=".VideoNavigationActivity" />
   </application>
 
 </manifest>
