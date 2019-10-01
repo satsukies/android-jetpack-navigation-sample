@@ -21,6 +21,8 @@
     <activity android:name=".TimetableActivity" />
     <activity android:name=".VideoActivity" />
     <activity android:name=".VideoNavigationActivity" />
+    <activity android:name=".BottomActivity" />
+    <activity android:name=".TranslucentActivity" android:theme="@style/AppTheme.Transparent"/>
   </application>
 
 </manifest>
